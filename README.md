@@ -4,7 +4,7 @@
 
 ## Projects
 
-1. Palindrome Checker
+1. [Palindrome Checker](https://github.com/ovsmnk/freecodecamp-javascript-algorithms-and-data-structures-projects/tree/main/palindrome-checker)
 2. Roman Numeral Converter
 3. Telephone Number Validator
 4. Cash Register
