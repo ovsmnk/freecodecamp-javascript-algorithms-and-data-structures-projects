@@ -1,13 +1,152 @@
 :root {
+  --text: #cdd6f4;
+  --base: #1e1e2e;
+  --peach: #fab387;
+  --lavender: #b4befe;
+  --crust: #11111b;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
 }
 
 html {
   box-sizing: border-box;
-  min-height: 100%;
+  height: 100%;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: var(--base);
+  height: 100%;
+  margin: 0;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--lavender);
+  margin: 0 0 30px;
+}
+
+.form {
+  border-radius: 20px;
+  padding: 50px;
+  background-color: var(--surface0);
+  border: 3px solid var(--crust);
+  box-shadow: 5px 5px 10px var(--crust);
+}
+
+.form__text {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.form__row {
+  display: flex;
+  margin: 0 0 15px;
+}
+
+.form__input,
+.form__button {
+  outline: none;
+  font: inherit;
+  transition: all 0.2s ease;
+  border: 3px solid rgba(180, 190, 254, 0.5);
+}
+
+.form__input {
+  flex: 3;
+  color: inherit;
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+  background-color: var(--surface1);
+  padding: 8px 15px;
+}
+
+.form__input:hover,
+.form__input:focus {
+  border-color: var(--lavender);
+  background-color: var(--surface2);
+}
+
+.form__button {
+  flex: 1;
+  color: var(--base);
+  border-radius: 0 20px 20px 0;
+  border-left: none;
+  background-color: rgba(180, 190, 254, 0.5);
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.form__button:hover,
+.form__button:focus {
+  border-color: var(--lavender);
+  background-color: var(--lavender);
+}
+
+.form__output {
+  margin: 0;
+  font-size: 18px;
+  color: var(--peach);
+}
+
+@media screen and (max-width: 600px) {
+  .palindrome-checker {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .form {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .form__text,
+  .form__button,
+  .form__output {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .form__row {
+    flex-direction: column;
+    gap: 15px 0;
+  }
+
+  .form__input,
+  .form__button {
+    border-radius: 20px;
+    border: 3px solid rgba(180, 190, 254, 0.5);
+  }
+
+  .form__input,
+  .form__button {
+    padding: 5px 15px;
+  }
 }

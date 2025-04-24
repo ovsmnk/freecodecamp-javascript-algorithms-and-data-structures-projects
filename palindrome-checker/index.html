@@ -6,10 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Palindrome Checker project">
   <title>Palindrome Checker Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+  <main class="main">
+    <div class="palindrome-checker">
+      <h1 class="title">Palindrome Checker</h1>
+      <form action="#" method="post" class="form">
+        <p class="form__text">Enter in text to check for a palindrome:</p>
+        <p class="form__row">
+          <input type="text" class="form__input" id="text-input">
+          <button class="form__button" type="submit" id="check-btn">Check</button>
+        </p>
+        <p id="result" class="form__output"></p>
+      </form>
+    </div>
+  </main>
 
   <script src="js/script.js"></script>
 </body>
