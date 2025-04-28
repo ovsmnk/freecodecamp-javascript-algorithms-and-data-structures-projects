@@ -5,7 +5,7 @@
 ## Projects
 
 1. [Palindrome Checker](https://github.com/ovsmnk/freecodecamp-javascript-algorithms-and-data-structures-projects/tree/main/palindrome-checker)
-2. Roman Numeral Converter
+2. [Roman Numeral Converter](https://github.com/ovsmnk/freecodecamp-javascript-algorithms-and-data-structures-projects/tree/main/roman-numeral-converter)
 3. Telephone Number Validator
 4. Cash Register
 5. RPG Creature Search App
