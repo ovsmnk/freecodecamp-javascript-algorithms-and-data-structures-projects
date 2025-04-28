@@ -1,4 +1,11 @@
-:root {}
+:root {
+  --text: #cdd6f4;
+  --base: #1e1e2e;
+  --lavender: #b4befe;
+  --surface0: #313244;
+  --surface2: #585b70;
+  --red: #f38ba8;
+}
 
 html {
   box-sizing: border-box;
@@ -9,4 +16,115 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-family: "Gideon Roman", serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  margin: 0;
+  height: 100%;
+  color: var(--text);
+  background-color: var(--base);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.main {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.title {
+  margin: 0 0 50px;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.form {
+  border: 3px solid var(--surface0);
+  border-radius: 10px;
+  padding: 50px 20px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.form__text {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+
+.form__input,
+.form__button {
+  font: inherit;
+  color: inherit;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.form__input {
+  background-color: var(--surface0);
+  border: 3px solid var(--surface2);
+  margin-bottom: 10px;
+}
+
+.form__button {
+  background-color: rgba(180, 190, 254, 0.5);
+  color: var(--base);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.form__button:hover {
+  background-color: var(--lavender);
+  box-shadow: 0 0 10px rgba(180, 190, 254, 0.5);
+}
+
+.output {
+  display: none;
+  margin: 20px auto 0;
+  max-width: 450px;
+  font-size: 36px;
+  font-size: 24px;
+  padding: 15px;
+  border: 3px solid var(--surface0);
+}
+
+.output--error {
+  background-color: var(--red);
+  color: var(--base);
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .form {
+    padding: 10px;
+  }
+
+  .form__text {
+    font-size: 18px;
+  }
 }
